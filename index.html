@@ -229,7 +229,7 @@
     };
 
     langBtn.addEventListener("click", () => {
-      lang = lang === "en" ? "zh" : "en";
+      lang = lang === "zh" ? "en" : "zh";
       const c = content[lang];
       document.getElementById("name").textContent = c.name;
       document.getElementById("title").textContent = c.title;
