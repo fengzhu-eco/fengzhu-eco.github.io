@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>朱峰 | Academic Homepage</title>
+  <title>Feng Zhu | Academic Homepage</title>
   <style>
     body {
       font-family: "Helvetica Neue", Arial, sans-serif;
@@ -103,131 +103,116 @@
 
 <body>
   <div class="lang-switch">
-    <button id="switchLang">English</button>
+    <button id="switchLang">中文</button>
   </div>
 
   <header>
     <div class="avatar">
-      <!-- 上传你的头像文件为 photo.jpg 到仓库根目录 -->
       <img src="photo.jpg" alt="Avatar" />
     </div>
     <div class="info">
-      <h1 id="name">朱峰</h1>
-      <p id="title">博士研究生，应用经济学，北京交通大学经济管理学院</p>
+      <h1 id="name">Feng Zhu</h1>
+      <p id="title">Ph.D. Candidate, Applied Economics, School of Economics and Management, Beijing Jiaotong University</p>
       <p id="links">
         <a href="mailto:fengzhu@bjtu.edu.cn">fengzhu@bjtu.edu.cn</a> ·
         <a href="https://fengzhu-eco.github.io/">GitHub</a> ·
-        <a href="https://scholar.google.com/citations?user=eNWMa4YAAAAJ&hl=zh-CN&oi=sra">Google Scholar</a>
+        <a href="https://scholar.google.com/citations?user=eNWMa4YAAAAJ&hl=en">Google Scholar</a>
       </p>
     </div>
   </header>
 
   <section>
-    <h2 id="about-title">关于我</h2>
+    <h2 id="about-title">About Me</h2>
     <p id="about-text">
-      我是北京交通大学经济管理学院的博士研究生，研究方向包括数字经济学、网络经济学与博弈论。
+      I am a Ph.D. candidate in Applied Economics at the School of Economics and Management, Beijing Jiaotong University. My research focuses on digital economics, network economics, and game theory.
     </p>
   </section>
 
   <section>
-    <h2 id="interests-title">研究方向</h2>
+    <h2 id="interests-title">Research Interests</h2>
     <ul id="interests-list">
-      <li>数字经济学</li>
-      <li>网络经济学</li>
-      <li>博弈论</li>
+      <li>Digital Economics</li>
+      <li>Network Economics</li>
+      <li>Game Theory</li>
+      <li>Industrial Organization</li>
     </ul>
   </section>
 
   <section>
-    <h2 id="pubs-title">学术发表</h2>
+    <h2 id="pubs-title">Publications</h2>
     <ul id="pubs-list">
-      <li><strong> Potentials in Quadratic Cournot Cross-holding Games.(With Zhigang Cao, Guopeng Li and Sixian Shen) Journal of Mathematical Economics，2025。</li>
-      <li><strong> Pricing Negative Externalities in Social Networks.(With Guopeng Li, Sijie Wang and Yifan Xiong) Journal of Mathematical Economics，2025。 </li>
-      <li><strong> 公共品视角下学术期刊市场的现状与展望。(合作者：王宜真、曹志刚、吴登生) ，中国管理科学，2025。 </li>
-      <li><strong> 双寡头数字平台竞争中基于卖家是否多归属的三级价格歧视。(合作者：李国鹏、曹志刚)，运筹与管理，2023。 </li>
-      <li><strong> 博弈论和经济学中均衡不存在的解读。(合作者：曹志刚、宋瑾、王思杰)，运筹学学报，2024。</li>
+      <li><strong>Potentials in Quadratic Cournot Cross-holding Games</strong> (with Zhigang Cao, Guopeng Li, and Sixian Shen), <em>Journal of Mathematical Economics</em>, 2025.</li>
+      <li><strong>Pricing Negative Externalities in Social Networks</strong> (with Guopeng Li, Sijie Wang, and Yifan Xiong), <em>Journal of Mathematical Economics</em>, 2025.</li>
+      <li><strong>Current Situation and Prospects of the Academic Journal Market from the Perspective of Public Goods</strong> (with Yizhen Wang, Zhigang Cao, and Dengsheng Wu), <em>Chinese Journal of Management Science</em>, 2025.</li>
+      <li><strong>Three-level Price Discrimination in Duopoly Digital Platform Competition</strong> (with Guopeng Li and Zhigang Cao), <em>Operations Research and Management Science</em>, 2023.</li>
+      <li><strong>Interpretations of Nonexistence of Equilibrium in Game Theory and Economics</strong> (with Zhigang Cao, Jin Song, and Sijie Wang), <em>Journal of Operations Research Society of China</em>, 2024.</li>
     </ul>
   </section>
 
   <section>
-    <h2 id="teach-title">教学经历</h2>
+    <h2 id="teach-title">Teaching</h2>
     <ul id="teach-list">
-      <li>博弈论与机制设计（本科），助教，2020年</li>
-      <li>数理经济学（本科），助教，2024年</li>
+      <li>Game Theory and Mechanism Design (Undergraduate), Teaching Assistant, 2020</li>
+      <li>Mathematical Economics (Undergraduate), Teaching Assistant, 2024</li>
     </ul>
   </section>
-
 
   <div class="contact">
-    <p id="footer">最后更新：2025年10月 · © 朱峰</p>
+    <p id="footer">Last updated: October 2025 · © Feng Zhu</p>
   </div>
 
   <script>
     const langBtn = document.getElementById("switchLang");
-    let lang = "en";
+    let lang = "en"; // 默认语言：英文
 
     const content = {
       zh: {
         name: "朱峰",
         title: "博士研究生，北京交通大学经济管理学院，应用经济学",
         aboutTitle: "关于我",
-        aboutText:
-          "我是北京交通大学经济管理学院的博士研究生，应用经济学专业，研究方向包括数字经济学、网络经济学与博弈论。",
+        aboutText: "我是北京交通大学经济管理学院的博士研究生，研究方向包括数字经济学、网络经济学与博弈论。",
         interestsTitle: "研究方向",
-        interestsList: [
-          "数字经济学",
-          "网络经济学",
-          "博弈论",
-        ],
+        interestsList: ["数字经济学", "网络经济学", "博弈论"],
         pubsTitle: "学术发表",
         pubsList: [
-          "Potentials in Quadratic Cournot Cross-holding Games.(With Zhigang Cao, Guopeng Li and Sixian Shen) Journal of Mathematical Economics，2025。 ",
-          "Pricing Negative Externalities in Social Networks.(With Guopeng Li, Sijie Wang and Yifan Xiong) Journal of Mathematical Economics，2025。 ",
-          "公共品视角下学术期刊市场的现状与展望。(合作者：王宜真、曹志刚、吴登生) ，中国管理科学，2025。 ",
-          "双寡头数字平台竞争中基于卖家是否多归属的三级价格歧视。(合作者：李国鹏、曹志刚)，运筹与管理，2023。 ",
-          "博弈论和经济学中均衡不存在的解读。(合作者：曹志刚、宋瑾、王思杰)，运筹学学报，2024。 ",
+          "Potentials in Quadratic Cournot Cross-holding Games.（与曹志刚、李国鹏、沈思贤合著）《Journal of Mathematical Economics》，2025。",
+          "Pricing Negative Externalities in Social Networks.（与李国鹏、王思杰、熊一帆合著）《Journal of Mathematical Economics》，2025。",
+          "公共品视角下学术期刊市场的现状与展望。（与王宜真、曹志刚、吴登生合著）《中国管理科学》，2025。",
+          "双寡头数字平台竞争中基于卖家是否多归属的三级价格歧视。（与李国鹏、曹志刚合著）《运筹与管理》，2023。",
+          "博弈论和经济学中均衡不存在的解读。（与曹志刚、宋瑾、王思杰合著）《运筹学学报》，2024。"
         ],
         teachTitle: "教学经历",
         teachList: [
-          "博弈论与信息经济学（本科），助教，2024年",
-          "数理经济学（本科），助教，2025年",
+          "博弈论与机制设计（本科），助教，2020年",
+          "数理经济学（本科），助教，2024年"
         ],
-        cvTitle: "简历",
-        cvText: "下载我的简历：CV (PDF)",
-        footer: "最后更新：2025年10月 · © 冯筑",
+        footer: "最后更新：2025年10月 · © 朱峰"
       },
       en: {
         name: "Feng Zhu",
-        title: "Ph.D. Candidate, Applied Economics, School of Economics and Management, Beijing Jiaotong University, ",
+        title: "Ph.D. Candidate, Applied Economics, School of Economics and Management, Beijing Jiaotong University",
         aboutTitle: "About Me",
-        aboutText:
-          "I am a Ph.D. candidate in economics focusing on digital economics, network economics and game theory. ",
+        aboutText: "I am a Ph.D. candidate in Applied Economics at the School of Economics and Management, Beijing Jiaotong University. My research focuses on digital economics, network economics, and game theory.",
         interestsTitle: "Research Interests",
-        interestsList: [
-          "Digital Economics",
-          "Game Theory",
-          "Network economics",
-          "Industrial Organization",
-        ],
+        interestsList: ["Digital Economics", "Network Economics", "Game Theory", "Industrial Organization"],
         pubsTitle: "Publications",
         pubsList: [
-          "Potentials in Quadratic Cournot Cross-holding Games.(With Zhigang Cao, Guopeng Li and Sixian Shen) Journal of Mathematical Economics，2025。 ",
-          "Pricing Negative Externalities in Social Networks.(With Guopeng Li, Sijie Wang and Yifan Xiong) Journal of Mathematical Economics，2025。 ",
-          "公共品视角下学术期刊市场的现状与展望。(合作者：王宜真、曹志刚、吴登生) ，中国管理科学，2025。 ",
-          "双寡头数字平台竞争中基于卖家是否多归属的三级价格歧视。(合作者：李国鹏、曹志刚)，运筹与管理，2023。 ",
-          "博弈论和经济学中均衡不存在的解读。(合作者：曹志刚、宋瑾、王思杰)，运筹学学报，2024。 ",
+          "Potentials in Quadratic Cournot Cross-holding Games. (with Zhigang Cao, Guopeng Li, and Sixian Shen), Journal of Mathematical Economics, 2025.",
+          "Pricing Negative Externalities in Social Networks. (with Guopeng Li, Sijie Wang, and Yifan Xiong), Journal of Mathematical Economics, 2025.",
+          "Current Situation and Prospects of the Academic Journal Market from the Perspective of Public Goods. (with Yizhen Wang, Zhigang Cao, and Dengsheng Wu), Chinese Journal of Management Science, 2025.",
+          "Three-level Price Discrimination in Duopoly Digital Platform Competition. (with Guopeng Li and Zhigang Cao), Operations Research and Management, 2023.",
+          "Interpretations of Nonexistence of Equilibrium in Game Theory and Economics. (with Zhigang Cao, Jin Song, and Sijie Wang), Journal of Operations Research Society of China, 2024."
         ],
         teachTitle: "Teaching",
         teachList: [
-          "Game Theory and Information Economics (Undergraduate), Teaching Assistant, 2020",
-          "Mathematical Economics (Undergraduate), Teaching Assistant, 2025",
+          "Game Theory and Mechanism Design (Undergraduate), Teaching Assistant, 2020",
+          "Mathematical Economics (Undergraduate), Teaching Assistant, 2024"
         ],
-        <cvTitle: "CV",>
-        <cvText: "You can download my CV here: CV (PDF)",>
-        footer: "Last updated: October 2025 · © Feng Zhu",
-      },
+        footer: "Last updated: October 2025 · © Feng Zhu"
+      }
     };
 
+    // 切换语言逻辑
     langBtn.addEventListener("click", () => {
       lang = lang === "zh" ? "en" : "zh";
       const c = content[lang];
@@ -236,22 +221,11 @@
       document.getElementById("about-title").textContent = c.aboutTitle;
       document.getElementById("about-text").textContent = c.aboutText;
       document.getElementById("interests-title").textContent = c.interestsTitle;
-      document.getElementById("interests-list").innerHTML = c.interestsList
-        .map((x) => `<li>${x}</li>`)
-        .join("");
+      document.getElementById("interests-list").innerHTML = c.interestsList.map(x => `<li>${x}</li>`).join("");
       document.getElementById("pubs-title").textContent = c.pubsTitle;
-      document.getElementById("pubs-list").innerHTML = c.pubsList
-        .map((x) => `<li>${x}</li>`)
-        .join("");
+      document.getElementById("pubs-list").innerHTML = c.pubsList.map(x => `<li>${x}</li>`).join("");
       document.getElementById("teach-title").textContent = c.teachTitle;
-      document.getElementById("teach-list").innerHTML = c.teachList
-        .map((x) => `<li>${x}</li>`)
-        .join("");
-      document.getElementById("cv-title").textContent = c.cvTitle;
-      document.getElementById("cv-text").textContent = "";
-      document
-        .getElementById("cv-text")
-        .insertAdjacentHTML("beforeend", c.cvText);
+      document.getElementById("teach-list").innerHTML = c.teachList.map(x => `<li>${x}</li>`).join("");
       document.getElementById("footer").textContent = c.footer;
       langBtn.textContent = lang === "zh" ? "English" : "中文";
     });
