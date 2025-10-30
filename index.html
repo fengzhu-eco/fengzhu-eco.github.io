@@ -1,15 +1,260 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>Welcome to my homepage!</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>朱峰 | Academic Homepage</title>
   <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 100px; }
-    h1 { color: #333; }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 850px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #333;
+      background-color: #fafafa;
+      transition: all 0.3s ease;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 20px;
+    }
+
+    .avatar {
+      flex: 0 0 130px;
+      margin-right: 25px;
+      text-align: center;
+    }
+
+    .avatar img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    .info {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    h1 {
+      margin: 0 0 10px 0;
+      font-size: 2em;
+      font-weight: 600;
+    }
+
+    .lang-switch {
+      text-align: right;
+      margin-top: -10px;
+    }
+
+    .lang-switch button {
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+
+    .lang-switch button:hover {
+      background-color: #005fa3;
+    }
+
+    section {
+      margin-bottom: 35px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 5px;
+      color: #222;
+    }
+
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .contact {
+      text-align: center;
+      font-size: 0.95em;
+      color: #555;
+      margin-top: 50px;
+    }
   </style>
 </head>
+
 <body>
-  <h1> Hello，I'm Feng Zhu.</h1>
-  <p> Welcome to my homepage!😄</p>
+  <div class="lang-switch">
+    <button id="switchLang">English</button>
+  </div>
+
+  <header>
+    <div class="avatar">
+      <!-- 上传你的头像文件为 photo.jpg 到仓库根目录 -->
+      <img src="photo.jpg" alt="Avatar" />
+    </div>
+    <div class="info">
+      <h1 id="name">朱峰</h1>
+      <p id="title">博士研究生，应用经济学，北京交通大学经济管理学院</p>
+      <p id="links">
+        <a href="mailto:fengzhu@university.edu">fengzhu@university.edu</a> ·
+        <a href="https://github.com/fengzhu-eco">GitHub</a> ·
+        <a href="https://scholar.google.com/">Google Scholar</a>
+      </p>
+    </div>
+  </header>
+
+  <section>
+    <h2 id="about-title">关于我</h2>
+    <p id="about-text">
+      我是某大学经济学博士研究生，研究方向包括平台经济学、博弈论与网络外部性。
+      我的研究致力于理解数字平台如何通过算法设计与市场结构影响社会福利。
+    </p>
+  </section>
+
+  <section>
+    <h2 id="interests-title">研究方向</h2>
+    <ul id="interests-list">
+      <li>数字与平台经济学</li>
+      <li>博弈论与机制设计</li>
+      <li>产业组织</li>
+      <li>网络外部性</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="pubs-title">学术发表</h2>
+    <ul id="pubs-list">
+      <li><strong>论文标题 1</strong>，《期刊名称》，2025年。 [<a href="#">PDF</a>]</li>
+      <li><strong>论文标题 2</strong>，与合作者，《工作论文》，2024年。 [<a href="#">摘要</a>]</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="teach-title">教学经历</h2>
+    <ul id="teach-list">
+      <li>微观经济学（本科），助教，2024年</li>
+      <li>产业组织（研究生），助教，2025年</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 id="cv-title">简历</h2>
+    <p id="cv-text">
+      下载我的简历：<a href="cv.pdf">CV (PDF)</a>
+    </p>
+  </section>
+
+  <div class="contact">
+    <p id="footer">最后更新：2025年10月 · © 冯筑</p>
+  </div>
+
+  <script>
+    const langBtn = document.getElementById("switchLang");
+    let lang = "zh";
+
+    const content = {
+      zh: {
+        name: "冯筑",
+        title: "博士研究生，经济学系，某大学",
+        aboutTitle: "关于我",
+        aboutText:
+          "我是某大学经济学博士研究生，研究方向包括平台经济学、博弈论与网络外部性。我的研究致力于理解数字平台如何通过算法设计与市场结构影响社会福利。",
+        interestsTitle: "研究方向",
+        interestsList: [
+          "数字与平台经济学",
+          "博弈论与机制设计",
+          "产业组织",
+          "网络外部性",
+        ],
+        pubsTitle: "学术发表",
+        pubsList: [
+          "论文标题 1，《期刊名称》，2025年。 [PDF]",
+          "论文标题 2，与合作者，《工作论文》，2024年。 [摘要]",
+        ],
+        teachTitle: "教学经历",
+        teachList: [
+          "微观经济学（本科），助教，2024年",
+          "产业组织（研究生），助教，2025年",
+        ],
+        cvTitle: "简历",
+        cvText: "下载我的简历：CV (PDF)",
+        footer: "最后更新：2025年10月 · © 冯筑",
+      },
+      en: {
+        name: "Feng Zhu",
+        title: "Ph.D. Candidate, Department of Economics, University",
+        aboutTitle: "About Me",
+        aboutText:
+          "I am a Ph.D. candidate in economics focusing on platform economics, game theory, and network externalities. My research explores how digital platforms influence welfare through algorithmic design and market structure.",
+        interestsTitle: "Research Interests",
+        interestsList: [
+          "Digital and Platform Economics",
+          "Game Theory and Mechanism Design",
+          "Industrial Organization",
+          "Network Externalities",
+        ],
+        pubsTitle: "Publications",
+        pubsList: [
+          "Paper Title 1, Journal Name, 2025. [PDF]",
+          "Paper Title 2, with Coauthor, Working Paper, 2024. [Abstract]",
+        ],
+        teachTitle: "Teaching",
+        teachList: [
+          "Microeconomics (Undergraduate), Teaching Assistant, 2024",
+          "Industrial Organization (Graduate), Teaching Assistant, 2025",
+        ],
+        cvTitle: "CV",
+        cvText: "You can download my CV here: CV (PDF)",
+        footer: "Last updated: October 2025 · © Feng Zhu",
+      },
+    };
+
+    langBtn.addEventListener("click", () => {
+      lang = lang === "zh" ? "en" : "zh";
+      const c = content[lang];
+      document.getElementById("name").textContent = c.name;
+      document.getElementById("title").textContent = c.title;
+      document.getElementById("about-title").textContent = c.aboutTitle;
+      document.getElementById("about-text").textContent = c.aboutText;
+      document.getElementById("interests-title").textContent = c.interestsTitle;
+      document.getElementById("interests-list").innerHTML = c.interestsList
+        .map((x) => `<li>${x}</li>`)
+        .join("");
+      document.getElementById("pubs-title").textContent = c.pubsTitle;
+      document.getElementById("pubs-list").innerHTML = c.pubsList
+        .map((x) => `<li>${x}</li>`)
+        .join("");
+      document.getElementById("teach-title").textContent = c.teachTitle;
+      document.getElementById("teach-list").innerHTML = c.teachList
+        .map((x) => `<li>${x}</li>`)
+        .join("");
+      document.getElementById("cv-title").textContent = c.cvTitle;
+      document.getElementById("cv-text").textContent = "";
+      document
+        .getElementById("cv-text")
+        .insertAdjacentHTML("beforeend", c.cvText);
+      document.getElementById("footer").textContent = c.footer;
+      langBtn.textContent = lang === "zh" ? "English" : "中文";
+    });
+  </script>
 </body>
 </html>
